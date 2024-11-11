@@ -7,6 +7,7 @@
   <scrip>
     const fileInput = document.getElementById('upload_button');
     fileInput.onchange = () => {
+      console.log('click');
       const selectedFile = document.getElementById('upload_input').files[0];
       console.log(selectedFile);
       let dbx = new Dropbox({ accessToken: 'sl.CAjzGhDapErilapyDhfp7MH3AkmcQTAX5fY0x_vB5C_ZFiYD6FMVCeC-THhnEdrIV_po1d5dwhoGcYoZZWGLAl0O8TAGVYhEqM_8nWdOhY6D9RjbLCWJhtWEUlL8JHQF4rQfzuNyjqNp' });
