@@ -28,9 +28,9 @@
         method: 'POST',
           body: file,
           headers: {
-              "Authorization": "Bearer sl.CAgB3Od2vqm9r_Q5MeuCEalczHDB5MBLbH6csyIe8R4qLclcTp_72R2VTBVLmNWXjFVbt5cqsWWIbTofUPTojzLhYyFm_OcNcM4LRyTdiUB3iKDeTpdPmTcTa1i1lR1kigJHqxhMt_sp",
-              "Content-Type": 'application/octet-stream',
-              "Dropbox-API-Arg": '{"path": "/'+file.name+'","mode": "add","autorename": true,"mute": false, "strict_conflict":false}'
+              'Authorization': "Bearer sl.CAh5KTMmoUo2zYH9TlG2ReYDaCvGzneWRSl9lNbMaiEQn2QvODUUGwmVABOKRktf5qSPjSK1u27_fYmmAVhgYlFiquTD9daaHvT1GW9woT0PKI8kH0WFdhZG_KI0uP6X1gHpPrYxLhov",
+              'Content-Type': 'application/octet-stream',
+              'Dropbox-API-Arg': '{"path": "/'+file.name+'","mode": "add","autorename": true,"mute": false, "strict_conflict":false}'
           }
       })
       .then((response) => console.log(response.data))
