@@ -24,7 +24,7 @@
       console.log('click');
       var file = document.getElementById("upload_input").files[0];
       console.log(file);
-      const myRequest = new Request('https://content.dropboxapi.com/2/files/upload', {
+      fetch('https://content.dropboxapi.com/2/files/upload', {
         method: 'POST',
           body: file,
           headers: {
@@ -33,7 +33,6 @@
               'Dropbox-API-Arg': '{"path": "/'+file.name+'","mode": "add","autorename": true,"mute": false, "strict_conflict":false}'
           }
       });
-      const response = await fetch(myRequest);
     }
   </script>
 </body>
