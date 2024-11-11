@@ -22,17 +22,26 @@
   </div>
   <script>
     function my_upload_file(){
-
-      fetch('https://content.dropboxapi.com/2/files/upload_session/start', {
-        method: 'POST',
-        Authorization: 'Bearer sl.CAgBxZ-ncjb0m-OIZA3ENzsZFQ91T7aHFQw0nuR1hp_gzSQeW7U6KFPqhpO5wmLiBrORAGucpjYUJVywnjflGvBOwJ48BQXcq4cyyC-AjFOLiqK12TpvF6mVU_ypRdEoBgaCflpYnDVo',
+      request.post('https://content.dropboxapi.com/2/files/upload/my_reports', {
         headers: {
-          'Dropbox-API-Arg': {'close':'false'},
-          'Content-Type': "application/octet-stream"
-        }
-      })
-      .then(function(response) {
-            console.log(response.json());
+          Authorization: 'TOKEN HERE',
+          'Content-Type': 'application/octet-stream'
+          },
+        body: content
+        }, function optionalCallback(err, httpResponse, bodymsg) {
+            if (err) {
+                console.log(err);
+            }
+            else {
+                console.log("File uploaded to dropbox successfully!");
+                fs.unlink(temp_dir + 'report.pdf', function(err) {
+                    if (err)
+                        throw err;
+                    else {
+                        console.log("file deleted from server!");
+                    }
+                }
+            }
       });
     }
   </script>
