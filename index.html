@@ -2,17 +2,28 @@
 <html>
 <head>
   <title>Page Title</title>
-  <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="xrfp9n22m5c0d0l"></script>
+  <script src="https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js">
+  <scrip>
+    let dbx = new Dropbox({ accessToken: 'sl.CAjzGhDapErilapyDhfp7MH3AkmcQTAX5fY0x_vB5C_ZFiYD6FMVCeC-THhnEdrIV_po1d5dwhoGcYoZZWGLAl0O8TAGVYhEqM_8nWdOhY6D9RjbLCWJhtWEUlL8JHQF4rQfzuNyjqNp' });
+    dbx.filesUpload({path: `/${name}.fileFormat`,contents: blob,})
+      .then(function(response) {
+      console.log(response);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+    Dropbox.createSaveButton(url, filename, options);
+    document.getElementById("container").appendChild(button);
+  </script>
 </head>
 <body>
 
-<!DOCTYPE html>
-<html>
-<body>
+<label for="avatar">Choose a profile picture:</label>
 
-<p>Click on the "Choose File" button to upload a file:</p>
+<input type="file" name="avatar" accept="image/png, image/jpeg" />
 
-<a href="https://dl.dropboxusercontent.com/s/deroi5nwm6u7gdf/advice.png" class="dropbox-saver"></a>
+<a href="" class="dropbox-saver"></a>
+  <div class='container'></div>
 
 </body>
 </html>
