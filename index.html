@@ -5,8 +5,7 @@
   <link rel="stylesheet" href="bootstrap.css">
   <script src="https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js">
   <scrip>
-    const fileInput = document.getElementById('upload_button');
-    fileInput.onchange = () => {
+    function upload_file(){
       console.log('click');
       const selectedFile = document.getElementById('upload_input').files[0];
       console.log(selectedFile);
@@ -34,7 +33,7 @@
       <input id="upload_input" class="form-control" type="file">
     </div>
 
-    <button id="upload_button" class="btn btn-primary" >Submit</button>
+    <button id="upload_button" class="btn btn-primary" onclick="upload_file();">Submit</button>
   </div>
 </body>
 </html>
