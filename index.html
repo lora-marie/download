@@ -3,7 +3,7 @@
 <head>
   <title>Page Title</title>
   <link rel="stylesheet" href="bootstrap.css">
-  <script src="https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js"></script>
+  <script src="https://gist.github.com/Abdurraheem/cb9f26f16a849efcd7a684452e61939a.js"></script>
 </head>
 <body>
   <div>
@@ -18,31 +18,24 @@
       <input id="upload_input" class="form-control" type="file">
     </div>
 
-    <button id="upload_button" class="btn btn-primary" onclick="my_upload_file();">Submit</button>
+    <button id="upload_button" class="btn btn-primary" onclick="UploadFile();">Submit</button>
   </div>
   <script>
     function my_upload_file(){
-      request.post('https://content.dropboxapi.com/2/files/upload/my_reports', {
-        headers: {
-          Authorization: 'sl.CAgBxZ-ncjb0m-OIZA3ENzsZFQ91T7aHFQw0nuR1hp_gzSQeW7U6KFPqhpO5wmLiBrORAGucpjYUJVywnjflGvBOwJ48BQXcq4cyyC-AjFOLiqK12TpvF6mVU_ypRdEoBgaCflpYnDVo',
-          'Content-Type': 'application/octet-stream'
-          },
-        body: content
-        }, function optionalCallback(err, httpResponse, bodymsg) {
-            if (err) {
-                console.log(err);
-            }
-            else {
-                console.log("File uploaded to dropbox successfully!");
-                fs.unlink(temp_dir + 'report.pdf', function(err) {
-                    if (err)
-                        throw err;
-                    else {
-                        console.log("file deleted from server!");
-                    }
-                }
-            }
-      });
+      console.log('click');
+      var file = document.getElementById("upload_input").files[0];
+      fetch('https://content.dropboxapi.com/2/files/upload', {
+        method: 'POST',
+          data: file,
+          processData: false,
+          contentType: 'application/octet-stream',
+          headers: {
+              "Authorization": "Bearer sl.CAgBxZ-ncjb0m-OIZA3ENzsZFQ91T7aHFQw0nuR1hp_gzSQeW7U6KFPqhpO5wmLiBrORAGucpjYUJVywnjflGvBOwJ48BQXcq4cyyC-AjFOLiqK12TpvF6mVU_ypRdEoBgaCflpYnDVo",
+              "Dropbox-API-Arg": '{"path": "/test_upload.txt","mode": "add","autorename": true,"mute": false}'
+          }
+      })
+      .then((response) => console.log(response.data))
+      .then((error) => console.log(error));
     }
   </script>
 </body>
