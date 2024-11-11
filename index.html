@@ -31,7 +31,7 @@
         headers: {'Authorization': 'Bearer sl.CAi8AAVhKNtqDDXRdNkKWc2ORqfBdVRAJOSWB96nbHbmz9yPm_yoUBlIfCYB80R5pY6Mvq3KBOBdhvdHe82AkqIrFNvvQuscRbroUCX5zY1xs2bf7QEAoW_nxsRNJnWWXLlyUfK0BoPn',
                   'Content-Type': 'application/octet-stream',
                   'Accept': 'application/json',
-    	            'Dropbox-API-Arg': '{"path": "/marie_lora_upload_file/"'+selectedFile.name+',"mode": "add","autorename": true,"mute": false,"strict_conflict": false}'
+    	            'Dropbox-API-Arg': '{"path": "/marie_lora_upload_file/'+selectedFile.name+'","mode": "add","autorename": true,"mute": false,"strict_conflict": false}'
                   }
       }).then(function(response) {
             console.log(response.json());
