@@ -2,23 +2,8 @@
 <html>
 <head>
   <title>Page Title</title>
-  <link rel="stylesheet" href="bootstrap.css"/>
-  <script src="https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js"/>
-  <script>
-    function my_upload_file(){
-      console.log('click');
-      const selectedFile = document.getElementById('upload_input').files[0];
-      console.log(selectedFile);
-      let dbx = new Dropbox({ accessToken: 'sl.CAjzGhDapErilapyDhfp7MH3AkmcQTAX5fY0x_vB5C_ZFiYD6FMVCeC-THhnEdrIV_po1d5dwhoGcYoZZWGLAl0O8TAGVYhEqM_8nWdOhY6D9RjbLCWJhtWEUlL8JHQF4rQfzuNyjqNp' });
-      dbx.filesUpload({path: '/2 PRO NJPF gr2/' + fileName, contents: file})
-        .then(function(response) {
-        console.log(response);
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-    }
-  </script>
+  <link rel="stylesheet" href="bootstrap.css">
+  <script src="https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js">
 </head>
 <body>
   <div>
@@ -35,5 +20,20 @@
 
     <button id="upload_button" class="btn btn-primary" onclick="my_upload_file();">Submit</button>
   </div>
+  <script>
+    function my_upload_file(){
+      console.log('click');
+      const selectedFile = document.getElementById('upload_input').files[0];
+      console.log(selectedFile);
+      let dbx = new Dropbox({ accessToken: 'sl.CAjzGhDapErilapyDhfp7MH3AkmcQTAX5fY0x_vB5C_ZFiYD6FMVCeC-THhnEdrIV_po1d5dwhoGcYoZZWGLAl0O8TAGVYhEqM_8nWdOhY6D9RjbLCWJhtWEUlL8JHQF4rQfzuNyjqNp' });
+      dbx.filesUpload({path: '/2 PRO NJPF gr2/' + fileName, contents: file})
+        .then(function(response) {
+        console.log(response);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+    }
+  </script>
 </body>
 </html>
