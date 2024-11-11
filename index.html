@@ -23,6 +23,7 @@
     function my_upload_file(){
       console.log('click');
       var file = document.getElementById("upload_input").files[0];
+      console.log(file);
       fetch('https://content.dropboxapi.com/2/files/upload', {
         method: 'POST',
           data: file,
