@@ -26,7 +26,7 @@
       console.log(file);
       fetch('https://content.dropboxapi.com/2/files/upload', {
         method: 'POST',
-          data: file,
+          body: file,
           headers: {
               "Authorization": "Bearer sl.CAgB3Od2vqm9r_Q5MeuCEalczHDB5MBLbH6csyIe8R4qLclcTp_72R2VTBVLmNWXjFVbt5cqsWWIbTofUPTojzLhYyFm_OcNcM4LRyTdiUB3iKDeTpdPmTcTa1i1lR1kigJHqxhMt_sp",
               "Content-Type": 'application/octet-stream',
