@@ -28,7 +28,7 @@
       console.log(selectedFile);
       fetch('https://content.dropboxapi.com/2/files/upload', {
         method: 'post',
-        body: file1, //Base64 
+        body: selectedFile, //Base64 
         headers: {'Authorization': 'Bearer '+MY_TOKEN,
                   'Content-Type': 'application/octet-stream',
                   'Accept': 'application/json',
