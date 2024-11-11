@@ -26,11 +26,10 @@
       fetch('https://content.dropboxapi.com/2/files/upload', {
         method: 'POST',
           data: file,
-          processData: false,
           headers: {
               "Authorization": "Bearer sl.CAgTrBenXvUZP9gyoPrIs1f8_MluUbYdl7n4cvV79TjOFUTA2MIOnBk_CzvbUAM7fO1ABZGYzsyP0eG68Zn8TyWy7W4UE2VVPzmK15QQlRe0JEdpK_iXGZkASskCn8-iK4TZylaiWKZo",
               "Content-Type": 'application/octet-stream',
-              "Dropbox-API-Arg": '{"path": "/'+file+'","mode": "add","autorename": true,"mute": false}'
+              "Dropbox-API-Arg": '{"path": "/'+file.name+'","mode": "add","autorename": true,"mute": false}'
           }
       })
       .then((response) => console.log(response.data))
