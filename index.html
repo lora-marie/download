@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Page Title</title>
-  <link rel="stylesheet" href="bootstrap.css">
+  <title>Download & Upload - Marie LORA - proffesseur de mathématiques et informatiques</title>
   <link rel="stylesheet" href="bootstrap-grid.css">
+  <link rel="stylesheet" href="bootstrap.css">
 </head>
 <body class="container">
   <main class="row justify-content-md-center py-5">
-    <div class="classe col-10">
+    <div class="col-10">
+      <h2 class="text-center">Évaluations</h2>
+      <p class="text-center">Récupère les fichiers pour effectuer mon contrôle en classe et pouvoir les déposer en ligne pour la vérification.</p>
+    </div>
+    <div class="classe col-10 my-4">
       <div>
         <label for="select_classe" class="form-label mt-4">Sélectionner votre classe</label>
         <select id="select_classe" class="form-select" onchange="selection_classe()">
@@ -19,10 +23,15 @@
         </select>
       </div>
     </div>
-    <div class="fichier col-10">
+    <div class="fichier col-6 my-4">
       <div class="input-group mb-3">
         <input id="fichier_nom" type="text" class="form-control" placeholder="" disabled>
-        <button id="bouton_telecharger" class="btn btn-primary" type="button" onclick="telecharger_fichier()">télécharger le fichier</button>
+        <a id="fichier_lien" class="btn btn-primary disabled" href="" download disabled>télécharger le fichier</a>
+      </div>
+    </div>
+    <div id="box_fichier_depot" class="depot col-10 my-4 d-none">
+      <div class="row justify-content-md-center py-5">
+        <a id="fichier_depot" class="btn btn-lg btn-primary col-10" target=”_blank” href>Déposer mon/mes fichier(s) en ligne</a>
       </div>
     </div>
   </main>
