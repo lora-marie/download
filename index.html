@@ -5,35 +5,25 @@
   <link rel="stylesheet" href="bootstrap.css">
 </head>
 <body>
-  <div>
-    <div>
-      <label for="formFile" class="form-label mt-4">Default file input example</label>
-        <div>
-          <label for="exampleSelect1" class="form-label mt-4">Example select</label>
-          <select class="form-select" id="exampleSelect1">
-            <option>2 PRO NJPF gr2</option>
-          </select>
-        </div>
-      <input id="upload_input" class="form-control" type="file">
+  <main>
+    <div class="classe">
+      <div>
+        <label for="classeSelect" class="form-label mt-4">Selectionner votre classe</label>
+        <select class="form-select" id="classeSelect">
+          <option>1 pro hocv</option>
+          <option>1 pro ap</option>
+          <option>2 générale</option>
+          <option>2 pro njpf</option>
+          <option>2 pro pegc</option>
+        </select>
+      </div>
     </div>
-
-    <button id="upload_button" class="btn btn-primary" onclick="my_upload_file();">Ajouter</button>
-  </div>
-  <script>
-    function my_upload_file(){
-      console.log('click');
-      var file = document.getElementById("upload_input").files[0];
-      console.log(file);
-      fetch('https://content.dropboxapi.com/2/files/upload', {
-        method: 'POST',
-          body: file,
-          headers: {
-              'Authorization': "Bearer sl.CAh5KTMmoUo2zYH9TlG2ReYDaCvGzneWRSl9lNbMaiEQn2QvODUUGwmVABOKRktf5qSPjSK1u27_fYmmAVhgYlFiquTD9daaHvT1GW9woT0PKI8kH0WFdhZG_KI0uP6X1gHpPrYxLhov",
-              'Content-Type': 'application/octet-stream',
-              'Dropbox-API-Arg': '{"path": "/'+file.name+'","mode": "add","autorename": true,"mute": false, "strict_conflict":false}'
-          }
-      });
-    }
-  </script>
+    <div>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="" disabled>
+        <button class="btn btn-primary" type="button" id="button-addon2">télécharger le fichier</button>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
