@@ -10,7 +10,7 @@
     <div class="classe col-10">
       <div>
         <label for="select_classe" class="form-label mt-4">Sélectionner votre classe</label>
-        <select class="form-select" id="select_classe" onchange="selection_classe()">
+        <select id="select_classe" class="form-select" onchange="selection_classe()">
           <option>1 pro hocv</option>
           <option>1 pro ap</option>
           <option>2 générale</option>
@@ -21,8 +21,8 @@
     </div>
     <div class="fichier col-10">
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="" disabled>
-        <button class="btn btn-primary" type="button" id="button-addon2">télécharger le fichier</button>
+        <input id="fichier_nom" type="text" class="form-control" placeholder="" disabled>
+        <button id="bouton_telecharger" class="btn btn-primary" type="button" onclick="telecharger_fichier()">télécharger le fichier</button>
       </div>
     </div>
   </main>
