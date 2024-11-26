@@ -5,7 +5,10 @@ const tableau_fichier = {
     depot:'https://cloud.dabaldassi.fr/s/m3wkLm7YmnpD4gg'
   },
   classe_2_general: '',
-  classe_2_pro_njpf: '',
+  classe_2_pro_njpf: {
+    nom: 'captures',
+    depot: 'https://cloud.dabaldassi.fr/s/jzC46t3A4ekyCxR'
+  },
   classe_2_pro_pegc: ''
 }
 
