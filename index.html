@@ -5,8 +5,8 @@
   <link rel="stylesheet" href="bootstrap-grid.css">
   <link rel="stylesheet" href="bootstrap.css">
 </head>
-<body class="container">
-    <header>
+<body>
+  <header>
     <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -34,32 +34,34 @@
       </div>
     </nav>
   </header>
-  <main class="row justify-content-md-center py-5">
-    <div class="col-10">
-      <h2 class="text-center">Évaluations</h2>
-      <p class="text-center">Récupère les fichiers pour effectuer mon contrôle en classe et pouvoir les déposer en ligne pour la vérification.</p>
-    </div>
-    <div class="classe col-10 my-4">
-      <div>
-        <label for="select_classe" class="form-label mt-4">Sélectionner votre classe</label>
-        <select id="select_classe" class="form-select" onchange="selection_classe()">
-          <option value="classe_1_pro_hocv">1 pro hocv</option>
-          <option value="classe_1_pro_ap">1 pro ap</option>
-          <option value="classe_2_general">2 générale</option>
-          <option value="classe_2_pro_njpf">2 pro njpf</option>
-          <option value="classe_2_pro_pegc">2 pro pegc</option>
-        </select>
+  <main class="container">
+    <div class="row justify-content-md-center py-5">
+      <div class="col-10">
+        <h2 class="text-center">Évaluations</h2>
+        <p class="text-center">Récupère les fichiers pour effectuer mon contrôle en classe et pouvoir les déposer en ligne pour la vérification.</p>
       </div>
-    </div>
-    <div class="fichier col-6 my-4">
-      <div class="input-group mb-3">
-        <input id="fichier_nom" type="text" class="form-control" placeholder="" disabled>
-        <a id="fichier_lien" class="btn btn-primary disabled" href="" download disabled>télécharger le fichier</a>
+      <div class="classe col-10 my-4">
+        <div>
+          <label for="select_classe" class="form-label mt-4">Sélectionner votre classe</label>
+          <select id="select_classe" class="form-select" onchange="selection_classe()">
+            <option value="classe_1_pro_hocv">1 pro hocv</option>
+            <option value="classe_1_pro_ap">1 pro ap</option>
+            <option value="classe_2_general">2 générale</option>
+            <option value="classe_2_pro_njpf">2 pro njpf</option>
+            <option value="classe_2_pro_pegc">2 pro pegc</option>
+          </select>
+        </div>
       </div>
-    </div>
-    <div id="box_fichier_depot" class="depot col-10 my-4 d-none">
-      <div class="row justify-content-md-center py-5">
-        <a id="fichier_depot" class="btn btn-lg btn-primary col-10" target=”_blank” href>Déposer mon/mes fichier(s) en ligne</a>
+      <div class="fichier col-6 my-4">
+        <div class="input-group mb-3">
+          <input id="fichier_nom" type="text" class="form-control" placeholder="" disabled>
+          <a id="fichier_lien" class="btn btn-primary disabled" href="" download disabled>télécharger le fichier</a>
+        </div>
+      </div>
+      <div id="box_fichier_depot" class="depot col-10 my-4 d-none">
+        <div class="row justify-content-md-center py-5">
+          <a id="fichier_depot" class="btn btn-lg btn-primary col-10" target=”_blank” href>Déposer mon/mes fichier(s) en ligne</a>
+        </div>
       </div>
     </div>
   </main>
