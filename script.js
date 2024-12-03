@@ -1,5 +1,8 @@
 const tableau_fichier = {
-  classe_1_pro_hocv: '',
+  classe_1_pro_hocv: {
+    nom:'eval_risque_alcool.ods',
+    depot:'https://cloud.dabaldassi.fr/s/kGjHmf7tgmZZZRN'
+  },
   classe_1_pro_ap: {
     nom:'eval_risque_alcool.ods',
     depot:'https://cloud.dabaldassi.fr/s/m3wkLm7YmnpD4gg'
