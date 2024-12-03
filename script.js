@@ -9,8 +9,8 @@ const tableau_fichier = {
   },
   classe_2_general: '',
   classe_2_pro_njpf: {
-    nom: 'captures',
-    depot: 'https://cloud.dabaldassi.fr/s/jzC46t3A4ekyCxR'
+    nom: '/',
+    depot: 'https://cloud.dabaldassi.fr/s/7XrmFPgGDdeZAm5'
   },
   classe_2_pro_pegc: ''
 }
