@@ -1,0 +1,11 @@
+@page { margin: 10% }
+
+header{
+	display: none;
+}
+footer{
+	display: none;
+}
+body{
+	padding: 0;
+}
