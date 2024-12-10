@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8" />
   <title>Download & Upload - Marie LORA - proffesseur de mathématiques et informatiques</title>
   <link rel="stylesheet" href="bootstrap-grid.css">
   <link rel="stylesheet" href="bootstrap.css">
 </head>
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+<body style="padding-top: 10vh;">
+  <header >
+    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="index.html"><img src="images/cat_screaming_s.png"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarColor03">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Acceil
+              <a class="nav-link active" href="index.html">Accueil
                 <span class="visually-hidden">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="creer_site.html">WEB</a>
+              <a class="nav-link" href="creer_site.html">Site WEB</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link active" href="projects.html">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="presentation.html">Présentation</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <main class="container">
+  <main class="container" style="min-height: 80vh;">
     <div class="row justify-content-md-center py-5">
       <div class="col-10">
         <h2 class="text-center">Évaluations</h2>
@@ -44,6 +45,7 @@
         <div>
           <label for="select_classe" class="form-label mt-4">Sélectionner votre classe</label>
           <select id="select_classe" class="form-select" onchange="selection_classe()">
+            <option value="" disabled selected>Sélectionner votre classe</option>
             <option value="classe_1_pro_hocv">1 pro hocv</option>
             <option value="classe_1_pro_ap">1 pro ap</option>
             <option value="classe_2_general">2 générale</option>
@@ -55,7 +57,7 @@
       <div class="fichier col-6 my-4">
         <div class="input-group mb-3">
           <input id="fichier_nom" type="text" class="form-control" placeholder="" disabled>
-          <a id="fichier_lien" class="btn btn-primary disabled" href="" download disabled>télécharger le fichier</a>
+          <a id="fichier_lien" class="btn btn-primary disabled" href="" download disabled>Télécharger le fichier</a>
         </div>
       </div>
       <div id="box_fichier_depot" class="depot col-10 my-4 d-none">
@@ -65,7 +67,19 @@
       </div>
     </div>
   </main>
-  <footer></footer>
+  <footer class="container" style="min-height: 10vh;">
+    <div class="row justify-content-md-center pt-3">
+      <div class="col-10">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active">Accueil</li>
+          <li class="breadcrumb-item"><a href="creer_site.html">Site WEB</a></li>
+          <li class="breadcrumb-item"><a href="projects.html">Projects</a></li>
+          <li class="breadcrumb-item"><a href="presentation.html">Présentation</a></li>
+        </ol>
+      </div>
+    </div>
+  </footer>
+  <a class="fixed-bottom m-3" href="#" style="right: 0px; bottom: 0px; left: 90%;"><button type="button" class="btn btn-outline-primary">Top</button></a>
   <script src="script.js"></script>
 </body>
 </html>

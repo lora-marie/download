@@ -1,44 +1,172 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Base de création de son site web - Marie LORA - proffesseur de mathématiques et informatiques</title>
+  <meta charset="utf-8" />
+  <title>Base de création de son site web - Marie LORA - professeur de mathématiques et informatiques</title>
   <link rel="stylesheet" href="bootstrap-grid.css">
   <link rel="stylesheet" href="bootstrap.css">
 </head>
-<body>
+<body style="padding-top: 10vh;">
    <header>
-    <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="index.html"><img src="images/cat_screaming_s.png"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarColor03">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Acceil
-              </a>
+              <a class="nav-link" href="index.html">Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">WEB
+              <a class="nav-link active" href="creer_site.html">Site WEB
                 <span class="visually-hidden">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link active" href="projects.html">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="presentation.html">Présentation</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <main class="row justify-content-md-center py-5">
-    <h1>Creer mon premier site web</h1>
-    <article></article>
+  <main class="container" style="min-height: 80vh;">
+    <div class="row justify-content-md-center py-5">
+      <div class="col-10">
+        <h2 class="text-center">Consignes pour créer mon premier site web</h2>
+      </div>
+      <div class="col-10">
+        <section class="mb-4">
+          <h4>Objectifs</h4>
+          <p>Réaliser un site web de minimum 3 pages ayant chacune un menu horizontal des titres ou des sous-titres, avec un minimum de contenu.</p>
+        </section>
+        <section class="mb-4">
+          <h4>Étape 1 : Structure de base</h4>
+          <p>Créez un dossier nommé « MonSiteWeb » : ce dossier contiendra tous les fichiers du projet.</p>
+          <p>Créez trois fichiers HTML :</br>Vous pouvez les nommer comme vous voulez. Tout de même, il est conseillé de nommer votre page principale (accueil) "index.htlm".</br> De plus, il est intéressant que le nom de votre page corresponde au contenu qu'elle contient.</p>
+          <p>Créez un fichier CSS :</br>"style.css" pour le style du site.</p>
+        </section>
+        <section class="mb-4">
+          <h4>Étape 2 : Contenu des pages HTML</h4>
+
+          <p>Chaque pages doient suivre la structure suivant :</p>
+          <ul>
+            <li>Une entête qui contient un menu de navigation, on utilisera la balise "&#60;header&#62;" et "&#60;nav&#62;"</li>
+            <li>La partie contenue signaler par "&#60;main&#62;" ou "&#60;article&#62;", replie de texte ou d'images; du contenu que vous souhaitez.</li>
+            <li>Et finalement d'un pieds de page ou "&#60;footer&#62;", expliquand que c'est un projet realiser dans le cadre de votre Cours de SNT, avec un lien "&#60;a&#62;" redirigeant vers le site du lyée.</li>
+          </ul>
+          <div class="card border-primary mb-3">
+            <div class="card-header">Exemple du code de base d'un fichier HTML</div>
+            <div class="card-body">
+              <p class="card-text">
+                &#60;!doctype html&#62;</br>
+                &#60;html lang="fr"&#62;</br>
+                &#160;&#160;&#60;head&#62;</br>
+                &#160;&#160;&#160;&#160;&#60;meta charset="utf-8" /&#62;</br>
+                &#160;&#160;&#160;&#160;&#60;title&#62;My test page&#60;/title&#62;</br>
+                &#160;&#160;&#60;/head&#62;</br>
+                &#160;&#160;&#60;body&#62;</br>
+                &#160;&#160;&#160;&#160;&#60;p&#62;text&#60;p&#62;</br>
+                &#160;&#160;&#160;&#160;&#60;img src="images/mon-image.png" alt="My test image" /&#62;</br>
+                &#160;&#160;&#60;/body&#62;</br>
+                &#60;/html&#62;
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="mb-4">
+          <h4>Étape 3 : Mise en page avec CSS</h4>
+          <p>Appeler votre ficher CSS dans vos pages pour ajouter du style à votre mise en page.</p>
+          <p>Ajouter la balise "&#60;link&#62;" dans la partie "&#60;head&#62;" de votre site comme montrer ci-dessous.</p>
+          <div class="card border-primary mb-3">
+            <div class="card-body">
+              <p class="card-text">&#60;link rel="stylesheet" href="style.css"&#62;</p>
+            </div>
+          </div>
+          <p>Dans le fichier « style.css », vous pouvez modifier l'apparence de chaque élément présent sur vos pages :
+            <ul>
+              <li>Adapter la taille des images.</li>
+              <li>Changer la couleur d'un texte.</li>
+              <li>Ajouter des espaces entre des éléments.</li>
+              <li>...</li>
+            </ul>
+        </section>
+        <section class="mb-4">
+          <h4>Étape 4 : Utilsation du Themes Bootstrap</h4>
+          <p>Telecharger un fichier CSS gratuit disponible sur le site <a href="https://bootswatch.com/">Bootswatch.com</a></br>Integrer le dans votre site comme vous l'avez fait avec le fichier "style.css", de preference juste avant.</p>
+          <p>Pour faire prendre l'apparence aux elements de votre site il faut rajouter un attribut class correspondant a ce que vous souhaitez.</br>Voir exemple si dessous.</p>
+          <div class="card border-primary mb-3">
+            <div class="card-body">
+              <p class="card-text">&#60;p&#62; class="text-secondary"&#62;Mon texte&#60;/p&#62;</p>
+            </div>
+          </div>
+          <p>Ou en venant copier/coller directement les éléments depuis le site dans votre code.</p>
+        </section>
+        <section class="mb-4">
+          <h4>Étape 5 : Test et validation</h4>
+          <ul>
+            <li>Ouvrez chaque page dans un navigateur web (par exemple, Google Chrome) pour vérifier l’affichage.</li>
+            <li>Testez les liens du menu de navigation pour vous assurer qu’ils fonctionnent correctement.</li>
+            <li>Ajustez le CSS si nécessaire pour améliorer le rendu visuel.</li>
+          </ul>
+        </section>
+        <section class="mb-4">
+          <h4>Critères d’évaluation :</h4>
+          <ul>
+            <li>Respect des consignes (structure et contenu des pages).</li>
+            <li>Qualité du code (propreté, organisation et commentaires).</li>
+            <li>Esthétique et ergonomie du site.</li>
+            <li>Fonctionnement des liens et du menu de navigation.</li>
+          </ul>
+        </section>
+        <section class="mb-4">
+          <h3>Livrable :</h3>
+          <p>Les fichiers HTML et CSS doivent être réunis dans le dossier « MonSiteWeb ».</p>
+          <p>Rendez votre projet en compressant le dossier (format ZIP) et en le soumettant à votre enseignant.</p>
+        </section>
+        <section class="mb-4">
+          <h4>Exemples d’éléments à intégrer pour enrichir le site : </h4>
+          <ul>
+            <li>Une galerie d’images simple (par exemple, 3 images alignées sur la page d’accueil).</li>
+            <li>Une section avec des liens externes pertinents (par exemple, des ressources utiles ou des exemples de thèmes similaires).</li>
+            <li>Des icônes pour les réseaux sociaux (ajoutez des liens fictifs vers des plateformes comme Facebook ou Twitter).</li>
+            <li>Des couleurs et des polices personnalisées en utilisant Google Fonts.</li>
+            <li>Des bordures ou ombres légères pour les différentes sections (exemple : boîtes ou cadres autour du contenu).</li>
+          </ul>
+          <p>C'est que du bonus.</p>
+        </section>
+        <section class="mb-4">
+          <h4>Liens utiles pour vous aider :</h4>
+          <ul>
+            <li>Site de référence pour créer un site, comprend un tutoriel complet avec des exemples pour tous les types d'éléments : <a href="https://www.w3schools.com/html/default.asp">W3schools.com</a></li>
+            <li>Tutoriel pas à pas pour créer un site simple : <a href="https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3">Open Classrooms</a></li>
+            <li>Site un peu plus expert, détaille tout le fonctionnement des éléments que vous serez amené à utiliser : <a href="https://developer.mozilla.org/fr/docs/Web/HTML">Mdn Web Docs</a></li>
+            <li>...</li>
+          </ul>
+          <p>Il existe presque une infinité de sites qui peuvent vous apprendre à coder. À la moindre difficulté ou problème rencontré, n'hésitez pas à aller sur un moteur de recherche et plusieurs sites différents.</p>
+        </section>
+      </div>
+    </div>
   </main>
-  <footer></footer>
+  <footer class="container" style="min-height: 10vh;">
+    <div class="row justify-content-md-center pt-3">
+      <div class="col-10">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Accueil</a></li>
+          <li class="breadcrumb-item active">Site WEB</li>
+          <li class="breadcrumb-item"><a href="projects.html">Projects</a></li>
+          <li class="breadcrumb-item"><a href="presentation.html">Présentation</a></li>
+        </ol>
+      </div>
+    </div>
+  </footer>
+  <a class="fixed-bottom m-3" href="#" style="right: 0px; bottom: 0px; left: 90%;"><button type="button" class="btn btn-outline-primary">Top</button></a>
+  <script src="script.js"></script>
 </body>
 </html>
+
