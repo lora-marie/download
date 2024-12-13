@@ -12,7 +12,10 @@ const tableau_fichier = {
     nom: '/',
     depot: 'https://cloud.dabaldassi.fr/s/7XrmFPgGDdeZAm5'
   },
-  classe_2_pro_pegc: ''
+  classe_2_pro_pegc: {
+    nom: 'eval macdo',
+    depot: 'https://cloud.dabaldassi.fr/s/E6kTWmd9So2GP2b'
+  }
 }
 
 
