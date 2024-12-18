@@ -7,7 +7,10 @@ const tableau_fichier = {
     nom:'eval_risque_alcool.ods',
     depot:'https://cloud.dabaldassi.fr/s/m3wkLm7YmnpD4gg'
   },
-  classe_2_general: '',
+  classe_2_general: {
+    nom: '/',
+    depot: 'https://cloud.dabaldassi.fr/s/YJQGmjcLs6rWE6t'
+  },
   classe_2_pro_njpf: {
     nom: '/',
     depot: 'https://cloud.dabaldassi.fr/s/7XrmFPgGDdeZAm5'
