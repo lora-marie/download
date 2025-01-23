@@ -4,7 +4,7 @@ const tableau_fichier = {
     depot:'https://cloud.dabaldassi.fr/s/kGjHmf7tgmZZZRN'
   },
   classe_1_pro_ap: {
-    nom:'eval_risque_alcool.ods',
+    nom:'eval tri.ods',
     depot:'https://cloud.dabaldassi.fr/s/m3wkLm7YmnpD4gg'
   },
   classe_2_general: {
