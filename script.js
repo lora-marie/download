@@ -16,7 +16,7 @@ const tableau_fichier = {
     depot: 'https://cloud.dabaldassi.fr/s/7XrmFPgGDdeZAm5'
   },
   classe_2_pro_pegc: {
-    nom: 'eval macdo',
+    nom: 'eval graph.ods',
     depot: 'https://cloud.dabaldassi.fr/s/E6kTWmd9So2GP2b'
   }
 }
